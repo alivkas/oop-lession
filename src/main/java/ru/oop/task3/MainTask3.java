@@ -30,11 +30,11 @@ public class MainTask3 {
             Transport currentTransport = transportList.get(i);
             Transport nextTransport = transportList.get(i + 1);
             Position nextTransportPos = nextTransport.getPosition();
-            person.put(currentTransport);
+            currentTransport.put(person);
             currentTransport.drive(person, nextTransportPos);
         }
         Transport lastTransport = transportList.getLast();
-        person.put(lastTransport);
+        lastTransport.put(person);
         lastTransport.drive(person, destination);
         person.walk(destination);
         assert person.getPosition() == destination;

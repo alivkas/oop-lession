@@ -29,7 +29,7 @@ public class MainTask2 {
      * @see Position
      */
     public void moveTo(Person person, Position destination, Transport transport) {
-        person.put(transport);
+        transport.put(person);
         transport.drive(person, destination);
         person.walk(destination);
         assert person.getPosition() == destination;

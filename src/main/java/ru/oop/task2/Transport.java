@@ -9,4 +9,10 @@ public interface Transport extends Positioned {
      * прямо до точки назначения, то он останавливается. Обновляет позицию человека.
      */
     void drive(Person person, Position destination);
+
+    /**
+     * Посадить человека в транспорт, если положение человека дальше положения транспорта,
+     * он идет пешком до него
+     */
+    void put(Person person);
 }

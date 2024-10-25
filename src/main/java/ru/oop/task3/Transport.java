@@ -1,7 +1,5 @@
 package ru.oop.task3;
 
-import java.util.List;
-
 /**
  * Транспорт, который знает свое положение
  */
@@ -11,4 +9,10 @@ public interface Transport extends Positioned {
      * прямо до точки назначения, то он останавливается. Обновлять позицию человека
      */
     void drive(Person person, Position destination);
+
+    /**
+     * Посадить человека в транспорт, если положение человека дальше положения транспорта,
+     * он идет пешком до него
+     */
+    void put(Person person);
 }
